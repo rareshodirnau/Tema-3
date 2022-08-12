@@ -1,0 +1,134 @@
+@import'./breakpoints';
+@import'./fonts';
+ 
+body{
+    background-color: #EFF0F3;
+    padding: 3rem 10vw; 
+        @include mobile {
+            padding: 2rem 1.5vw;
+        }
+        .container{
+            display: grid;
+            grid: auto / 100%;
+            row-gap: 64px;
+                    .card{
+                        background-color: #fff;
+                        border-radius: 16px;
+                        display: grid;
+                        grid: auto / 35% 65%;
+                        @include tablet {
+                                        grid: auto / 100%;
+                                    }
+                        @include mobile {
+                            grid: auto / 35% 65%;
+                        }
+                            .card-img  {
+                                            display: flex;
+                                            justify-content: center;
+                                            align-items: center;
+                                            border-radius: 16px 0 0 16px;
+                                            @include tablet {
+                                                border-radius: 16px 16px 0 0;
+                                                img {
+                                                    padding: 10%;
+                                                }
+                                            }
+                                            @include mobile {
+                                                border-radius: 16px 0 0 16px;
+                                                img {
+                                                    width: 75%;
+                                                }
+                                            }
+
+                                        }
+                            .card-img.first{
+                                background-color: #BCD1FF ;
+                            }
+                            .card-img.second{
+                                background: linear-gradient(135deg, #F395BA 0%, #FED182 100%);
+                            }
+                            .card-txt{
+                                display: flex;
+                                flex-direction: column;
+                                padding: 35px;
+                                    .card-header{
+                                        display: flex;
+                                        font-family: 'Open Sans';
+                                        font-style: normal;
+                                        color: #6E798C;
+                                            @include mobile {
+                                                font-size: 11px;
+                                                line-height: 15px;
+                                            }
+                                            .card-header-left{
+                                                width: 50%;
+                                                text-transform: uppercase;
+                                                font-weight: 600;
+                                                font-size: 20px;
+                                                line-height: 27px;
+                                            }
+                                            .card-header-right{
+                                                width: 50%;
+                                                text-align: right;
+                                                font-family: 'Open Sans';
+                                                font-style: normal;
+                                                font-weight: 400;
+                                                font-size: 18px;
+                                                line-height: 25px;
+                                            }
+                                    }
+                                    .card-title{
+                                        font-family: 'DM Serif Display';
+                                        font-style: normal;
+                                        font-weight: 400;
+                                        font-size: 40px;
+                                        line-height: 46px;
+                                        color: #081F32;
+                                            @include mobile {
+                                                font-size: 20px;
+                                                line-height: 25px;
+                                            }
+                                    }
+                                    .card-content{
+                                        color: #374A59;
+                                        font-family: 'Open Sans';
+                                        font-style: normal;
+                                        font-weight: 400;
+                                        font-size: 18px;
+                                        line-height: 27px;
+                                    @include mobile {
+                                        display: none;
+                                    }
+                                    }
+                                    .card-footer{
+                                        display: flex;
+                                        font-family: 'Open Sans';
+                                        font-style: normal;
+                                        font-weight: 600;
+                                        font-size: 18px;
+                                        line-height: 25px;
+                                        color: #007AE9;
+                                        align-items: center;
+                                            @include mobile {
+                                                display: none;
+                                            }
+                                            .card-footer-left{
+                                                display: flex;
+                                                width: 50%;
+                                                align-items: center;
+                                                img{
+                                                    margin-right: 10px;
+                                                }
+                                            }
+                                            .card-footer-right{
+                                                text-align: right;
+                                                width: 50%;
+                                            }
+                                    }
+                            }
+                            .card-img.third{
+                                background: #D2EBF7;
+                            }
+                    }
+    }
+} 
